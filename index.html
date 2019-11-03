@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dice</title>
+    <style>
+    body {
+      background-color: #f8c07e;
+      text-align: center;
+      margin: 10px;
+    }
+    .head {
+    background-color: #fcf4e6;
+    border: 6px solid #e7b67c;
+    padding: 5px;
+    }
+    .heading {
+    font-family: Zensyrom;
+    color: #fd9a19;
+    }
+    .text{
+    font-family: cursive;
+    color: #dc7816;
+    }
+    .section {
+      background-color: #e7b67c;
+      border: 6px solid #fcefd3;
+      padding: 5px;
+    }
+    #winner {
+    color: #ffffff;
+    font-family: Californian FB;
+    }
+    .foot {
+      color: #fd9a19;
+      background-color: #f9dfa6;
+    }
+
+    .foot img:hover {
+        background: #fcf4e6;
+    }
+
+    #dice1 {
+      padding-right: 30px;
+    }
+
+    #dice2 {
+        padding-left: 30px;
+    }
+
+    #btn {
+      background-color: #f9dfa6;;
+      font-family: monospace;
+      font-size: 15px;
+      border: 3px solid #e7b67c;
+      color: #ffaa05;
+      padding: 10px;
+    }
+    </style>
+
+      <link rel="icon" href="https://i.ibb.co/pnptChx/32.png"/>
+
+  </head>
+  <body>
+
+<header class = "head">
+  <h1 class = "heading">Dice Game</h1>
+  <p class ="text">Refresh the page using the refresh button to roll the two dices to see who will win, player one(left) or player two(right)</p>
+  <input id = "btn" type="button" value="Refresh Button" onClick="DiceGame()">
+</header>
+
+<section class = "section">
+  <h2 id = "winner">Guess who is the winner</h2>
+</section>
+
+<section class = "section">
+<img id = "dice1" src = "https://i.ibb.co/sWj4wRv/1.png" alt = "Dice1" height="200px;" width="200px;"></img>
+<img id = "dice2" src = "https://i.ibb.co/sWj4wRv/1.png" alt = "Dice2" height="200px;" width="200px;"></img>
+</section>
+
+<footer class = "foot">
+  <br>
+    <br>
+  <a class = "socialApp" href="https://uqu.edu.sa/mskhayat"><img src = "https://i.ibb.co/7G15Tms/web.png" alt = "UQUwebsite" height="40px;" width="40px;"></img></a>
+   <a class = "socialApp" href="mailto:mskhayat@uqu.edu.sa"><img src = "https://i.ibb.co/MDcB8Zk/email.png" alt = "Email" height="40px;" width="40px;"></img></a>
+   <a class = "socialApp" href="https://www.youtube.com/channel/UCFHn44byvAsKzDQz5e6VVbA"><img src = "https://i.ibb.co/S7tBB3Y/youtube.png" alt = "Youtube" height="40px;" width="40px;"></img></a>
+   <a class = "socialApp" href="https://twitter.com/csmariah"><img src = "https://i.ibb.co/yBKTP0b/twitter.png" alt = "Twitter" height="40px;" width="40px;"></img></a>
+   <a class = "socialApp" href="https://www.instagram.com/csmariah"><img src = "https://i.ibb.co/Z1qX99k/instgram.png" alt = "Instgram" height="40px;" width="40px;"></img></a>
+   <a class = "socialApp" href="https://ask.fm/Maroooshaa"><img src = "https://i.ibb.co/1KPmJ6w/ask.png" alt = "Ask" height="40px;" width="40px;"></img></a>
+<br>
+  <br>
+<p style = "font-family:Courier New;">©2019 CSMariah.com</p>
+  <br>
+</footer>
+
+<!--
+
+-->
+
+<script>
+var Dice = ["https://i.ibb.co/sWj4wRv/1.png",
+    "https://i.ibb.co/sQQGKLy/2.png",
+    "https://i.ibb.co/nP5ftHk/3.png",
+    "https://i.ibb.co/gTb5PCs/4.png",
+    "https://i.ibb.co/W0B67Jy/5.png",
+    "https://i.ibb.co/ZTthPVH/6.png"];
+function DiceGame() {
+var Dice1 = Dice[Math.floor(Math.random()*Dice.length)];
+var Dice2 = Dice[Math.floor(Math.random()*Dice.length)];
+
+document.getElementById('dice1').src = Dice1;
+document.getElementById('dice2').src = Dice2;
+
+switch (Dice1) {
+  case "https://i.ibb.co/sWj4wRv/1.png":
+  var DiceOne = 1; break;
+  case "https://i.ibb.co/sQQGKLy/2.png":
+  var DiceOne = 2; break;
+  case "https://i.ibb.co/nP5ftHk/3.png":
+  var DiceOne = 3; break;
+  case "https://i.ibb.co/gTb5PCs/4.png":
+  var DiceOne = 4; break;
+  case "https://i.ibb.co/W0B67Jy/5.png":
+  var DiceOne = 5; break;
+  case "https://i.ibb.co/ZTthPVH/6.png":
+  var DiceOne = 6; break;
+  default: console.log('Empty');
+}
+
+switch (Dice2) {
+  case "https://i.ibb.co/sWj4wRv/1.png":
+  var DiceTwo = 1; break;
+  case "https://i.ibb.co/sQQGKLy/2.png":
+  var DiceTwo = 2; break;
+  case "https://i.ibb.co/nP5ftHk/3.png":
+  var DiceTwo = 3; break;
+  case "https://i.ibb.co/gTb5PCs/4.png":
+  var DiceTwo = 4; break;
+  case "https://i.ibb.co/W0B67Jy/5.png":
+  var DiceTwo = 5; break;
+  case "https://i.ibb.co/ZTthPVH/6.png":
+  var DiceTwo = 6; break;
+  default: console.log('Empty');
+}
+
+if (DiceOne > DiceTwo) {
+document.getElementById('winner').innerHTML = "The Winner of the Game is Player One"; }
+  else if (DiceOne < DiceTwo) {
+document.getElementById('winner').innerHTML = "The Winner of the Game is Player Two";
+} else {
+  document.getElementById('winner').innerHTML = "Both of Player One and Player Two have Win";
+}
+}
+</script>
+
+</body>
+</html>
