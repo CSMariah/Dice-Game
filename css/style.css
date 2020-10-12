@@ -1,0 +1,55 @@
+body {
+  background-color: #f8c07e;
+  text-align: center;
+  margin: 10px;
+}
+.head {
+background-color: #fcf4e6;
+border: 6px solid #e7b67c;
+padding: 5px;
+}
+.heading {
+font-family: Zensyrom;
+color: #fd9a19;
+}
+.text{
+font-family: cursive;
+color: #dc7816;
+}
+.section {
+  background-color: #e7b67c;
+  border: 6px solid #fcefd3;
+  padding: 5px;
+}
+#winner {
+color: #ffffff;
+font-family: Californian FB;
+}
+.foot {
+  color: #fd9a19;
+  background-color: #f9dfa6;
+  padding: 20px;
+}
+.socialApp {
+  padding: 5px;
+}
+.foot img:hover {
+    background: #fcf4e6;
+}
+
+#dice1 {
+  padding-right: 30px;
+}
+
+#dice2 {
+    padding-left: 30px;
+}
+
+#btn {
+  background-color: #f9dfa6;;
+  font-family: monospace;
+  font-size: 15px;
+  border: 3px solid #e7b67c;
+  color: #ffaa05;
+  padding: 10px;
+}
